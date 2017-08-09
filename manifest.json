@@ -1,0 +1,34 @@
+{
+	"manifest_version": 2,
+	"name": "SpellChecker for Azerbaijani",
+  "short_name": "SpellChecker for Azerbaijani",
+	"version": "1.0",
+  "description": "Highlights misspelled words on the active webpage.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["spell/background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Spell check this page"
+  },
+  "web_accessible_resources": [
+    "typo/dictionaries/*"
+  ],
+  "commands": {
+    "toggle-spell-check": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Toggle Spell Check"
+    }
+  }
+}
