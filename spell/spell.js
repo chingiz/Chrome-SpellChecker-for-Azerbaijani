@@ -1,8 +1,8 @@
 var utilityDict = new Typo();
-var affData = utilityDict._readFile(chrome.extension.getURL('typo/dictionaries/en_US/en_US.aff'));
-var wordData = utilityDict._readFile(chrome.extension.getURL('typo/dictionaries/en_US/en_US.dic'));
+var affData = utilityDict._readFile(chrome.runtime.getURL('typo/dictionaries/az_AZ/az.aff'));
+var wordData = utilityDict._readFile(chrome.runtime.getURL('typo/dictionaries/az_AZ/az.dic'));
 
-var dict = new Typo('en_US', affData, wordData);
+var dict = new Typo('az_AZ', affData, wordData);
 var ignore = 'style script textarea code canvas'.replace(/\w+/g, '$&, $& *,').slice(0, -1);
 var pElm;
 
